@@ -1,9 +1,9 @@
-public class JavaApp {
-    public static void main (String[] args){
-      Java javaObj = new Java("Java 11");
-      System.out.println(javaobj.getNome());
-    }
-  }
+//public class JavaApp {
+  //  public static void main (String[] args){
+     // Java javaObj = new Java("Java 11");
+      //System.out.println(javaobj.getNome());
+   // }
+ // }
   
   // Supomos que a classe Java exista em outro arquivo:
   // public class Java {
