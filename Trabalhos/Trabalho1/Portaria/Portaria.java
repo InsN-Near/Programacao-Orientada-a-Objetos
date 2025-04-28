@@ -1,4 +1,4 @@
-package Trabalhos.Portaria;
+package Trabalhos.Trabalho1.Portaria;
 
 public class Portaria {
     private PortaoEletronico portaoEletronico;

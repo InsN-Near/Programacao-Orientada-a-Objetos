@@ -1,9 +1,9 @@
-package Trabalhos.Cozinha;
+package Trabalhos.Trabalho1.Portaria;
 
-public class Liquidificador {
+public class PortaAutomatica {
     private boolean ligado;
 
-    public Liquidificador() {
+    public PortaAutomatica() {
         this.ligado = false;
     }
 
@@ -21,9 +21,9 @@ public class Liquidificador {
 
     public String observar() {
         if (this.ligado) {
-            return "Liquidificador ligado";
+            return "Porta Automática ligada";
         } else {
-            return "Liquidificador desligado";
+            return "Porta Automática desligada";
         }
     }
 }

@@ -1,4 +1,4 @@
-package Trabalhos.Cozinha;
+package Trabalhos.Trabalho1.Cozinha;
 
 public class TesteCozinha {
     public static void main(String[] args) {

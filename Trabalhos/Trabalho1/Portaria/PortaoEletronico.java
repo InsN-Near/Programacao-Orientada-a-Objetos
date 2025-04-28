@@ -1,9 +1,9 @@
-package Trabalhos.Cozinha;
+package Trabalhos.Trabalho1.Portaria;
 
-public class Geladeira {
+public class PortaoEletronico {
     private boolean ligado;
 
-    public Geladeira() {
+    public PortaoEletronico() {
         this.ligado = false;
     }
 
@@ -21,9 +21,9 @@ public class Geladeira {
 
     public String observar() {
         if (this.ligado) {
-            return "Geladeira ligada";
+            return "Portão Eletrônico ligado";
         } else {
-            return "Geladeira desligada";
+            return "Portão Eletrônico desligado";
         }
     }
 }

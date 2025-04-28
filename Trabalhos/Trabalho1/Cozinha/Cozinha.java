@@ -1,4 +1,4 @@
-package Trabalhos.Cozinha;
+package Trabalhos.Trabalho1.Cozinha;
 
 public class Cozinha {
     private Geladeira geladeira;

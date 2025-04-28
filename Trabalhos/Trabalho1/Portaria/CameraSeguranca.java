@@ -1,9 +1,9 @@
-package Trabalhos.Cozinha;
+package Trabalhos.Trabalho1.Portaria;
 
-public class Microondas {
+public class CameraSeguranca {
     private boolean ligado;
 
-    public Microondas() {
+    public CameraSeguranca() {
         this.ligado = false;
     }
 
@@ -21,9 +21,9 @@ public class Microondas {
 
     public String observar() {
         if (this.ligado) {
-            return "Microondas ligado";
+            return "Câmera de Segurança ligada";
         } else {
-            return "Microondas desligado";
+            return "Câmera de Segurança desligada";
         }
     }
 }

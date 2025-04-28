@@ -1,9 +1,9 @@
-package Trabalhos.Portaria;
+package Trabalhos.Trabalho1.Cozinha;
 
-public class PortaoEletronico {
+public class Microondas {
     private boolean ligado;
 
-    public PortaoEletronico() {
+    public Microondas() {
         this.ligado = false;
     }
 
@@ -21,9 +21,9 @@ public class PortaoEletronico {
 
     public String observar() {
         if (this.ligado) {
-            return "Portão Eletrônico ligado";
+            return "Microondas ligado";
         } else {
-            return "Portão Eletrônico desligado";
+            return "Microondas desligado";
         }
     }
 }
