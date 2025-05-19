@@ -1,0 +1,14 @@
+--- Exercicio 3 ---
+Resultado impresso:
+Computador()
+Notebook()
+Codigo: 12345
+Explicacao: Construtor Notebook chama Computador(), depois seu codigo e ligar().
+
+--- Exercicio 4 ---
+Resultados impressos:
+x: 8
+x: 12
+Justificativa: Primeiro print e valor inicial de 'i' (Protegido). Segundo e valor modificado (ProtegidoSub).
+Motivo 'i' private: Encapsulamento, acesso por metodos.
+Motivo 'ajustar' protected: Acesso para subclasses e mesmo pacote.

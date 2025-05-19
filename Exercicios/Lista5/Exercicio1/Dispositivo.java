@@ -13,4 +13,8 @@ public class Dispositivo {
         return nome;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
+
 }

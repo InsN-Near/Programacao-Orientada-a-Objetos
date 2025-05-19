@@ -11,6 +11,10 @@ public class Usuario {
         this.dispositivo = null;
     }
 
+    public int getMatricula() {
+        return matricula;
+    }
+
     public void setDispositivo(Dispositivo dispositivo) {
         this.dispositivo = dispositivo;
     }
