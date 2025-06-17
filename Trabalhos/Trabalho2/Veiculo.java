@@ -14,7 +14,7 @@ public class Veiculo {
     }
 
     public void printDados() {
-        System.out.println("--- Dados do Veiculo ---");
+        System.out.println("-- Dados do Veiculo --");
         System.out.println("Modelo: " + this.modelo);
     }
 }

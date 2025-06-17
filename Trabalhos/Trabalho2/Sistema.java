@@ -17,7 +17,7 @@ public class Sistema {
         
         System.out.println("\n--- DADOS DO CLIENTE CADASTRADO ---");
         cliente.printDados();
-        System.out.println("-------------------------------------\n");
+        System.out.println("-----------------------------------\n");
 
         int numeroPedido = 1;
         char continuar;

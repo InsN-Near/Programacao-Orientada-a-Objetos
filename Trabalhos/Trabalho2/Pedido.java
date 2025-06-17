@@ -12,10 +12,10 @@ public class Pedido {
     }
 
     public void printDados() {
-        System.out.println("\n======= RESUMO DO PEDIDO =======");
+        System.out.println("\n====== RESUMO DO PEDIDO ======");
         System.out.println("Numero do Pedido: " + this.numero);
         this.cliente.printDados();
         this.veiculo.printDados();
-        System.out.println("==============================\n");
+        System.out.println("=============================\n");
     }
 }
