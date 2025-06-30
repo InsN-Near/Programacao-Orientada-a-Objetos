@@ -1,3 +1,4 @@
+package Exercicios.Lista12.Exercicio1;
 public class LojaProduto {
     public static void main(String[] args) {
         Produto p1 = new Produto("Notebook", 4500.00);

@@ -1,3 +1,4 @@
+package Exercicios.Lista12.Exercicio1;
 public class Produto {
     String nome;
     double valor;

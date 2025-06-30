@@ -1,4 +1,4 @@
-package Exercicios.Listaz12.Exercicio2;
+package Exercicios.Lista12.Exercicio2;
 
 public class Funcionario extends Pessoa {
     String cargo;

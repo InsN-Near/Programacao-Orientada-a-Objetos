@@ -1,0 +1,56 @@
+2. Como uma subclasse executa o construtor de sua superclasse?
+Uma subclasse executa o construtor de sua superclasse através de uma chamada, 
+implícita ou explícita, ao super(). Se o programador não fizer uma chamada explícita, 
+o compilador Java insere automaticamente a chamada super(); (o construtor padrão, sem argumentos) 
+como a primeira linha do construtor da subclasse.
+
+3. Os parâmetros podem ser passados via super()?
+Sim. Se o construtor da superclasse exige parâmetros, a subclasse deve obrigatoriamente 
+fazer uma chamada explícita super(parametro1, parametro2, ...) para passar os valores necessários.
+
+4. Uma chamada a super() pode estar em qualquer local do construtor de uma subclasse?
+Não. A chamada a super() (ou a this()) deve ser obrigatoriamente a primeira instrução dentro do corpo de um construtor.
+
+5. Acesso a métodos em hierarquia
+b. Quais dos cinco métodos podem ser acessados por objetos da classe A?
+Objetos da classe A podem acessar apenas os métodos definidos em A: m1(), m2(), e m3().
+c. Quais dos cinco métodos podem ser acessados por objetos da classe B?
+Objetos da classe B podem acessar seus próprios métodos e os métodos públicos/protegidos herdados de A. 
+Portanto, podem acessar: m1(), m2(), m3(), m4(), e m5().
+d. Suponhamos que m1() fosse declarado como private. Agora quais dos cinco métodos podem ser acessados por 
+objetos da classe B?
+Se m1() for private em A, ele não é visível para a classe B. Portanto, um objeto de B poderia acessar: m2(), 
+m3(), m4(), e m5().
+
+6. Código
+
+A construção de objetos em uma hierarquia de herança ocorre da superclasse mais alta 
+para a subclasse mais baixa. Ao criar um objeto new C(), o construtor de C é chamado. 
+Sua primeira ação implícita é chamar o construtor de sua superclasse, B, via super(). 
+Por sua vez, a primeira ação do construtor de B é chamar o construtor de sua superclasse, A. 
+O construtor de A é executado primeiro (imprimindo "Construção de A."), depois o controle volta 
+para B (imprimindo "Construção de B."), e finalmente volta para C (imprimindo "Construção de C.").
+
+public class A {
+    public A() {
+        System.out.println("Construção de A.");
+    }
+}
+
+public class B extends A {
+    public B() {
+        System.out.println("Construção de B.");
+    }
+}
+
+public class C extends B {
+    public C() {
+        System.out.println("Construção de C.");
+    }
+}
+
+public class OrdemDeConstrucao {
+    public static void main(String[] args) {
+        C c = new C();
+    }
+}

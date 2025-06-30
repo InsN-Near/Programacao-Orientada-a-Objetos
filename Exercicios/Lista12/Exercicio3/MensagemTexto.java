@@ -1,4 +1,4 @@
-package Exercicios.Listaz12.Exercicio3;
+package Exercicios.Lista12.Exercicio3;
 
 public class MensagemTexto extends Mensagem {
     String texto;

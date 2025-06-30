@@ -1,4 +1,4 @@
-package Exercicios.Listaz12.Exercicio2;
+package Exercicios.Lista12.Exercicio2;
 
 public class Empresa {
     public static void main(String[] args) {
