@@ -1,0 +1,29 @@
+1. A classe "Throwable".
+
+2. O código deve fazer parte de um bloco "try".
+
+3. "catch" captura e trata uma exceção. Após a execução do bloco "catch", o fluxo do programa continua na instrução seguinte ao bloco "try-catch".
+
+4. O programa termina abruptamente e o sistema de tempo de execução do Java exibe a exceção e sua pilha de chamadas.
+
+5. O programa deve capturar e tratar a exceção, geralmente usando um bloco "try-catch", para evitar uma finalização inesperada e lidar com o erro.
+
+6. "try": Define um bloco de código que pode gerar uma exceção.
+"catch": Captura e trata a exceção gerada no bloco "try".
+"finally": Define um bloco de código que é sempre executado, ocorrendo ou não uma exceção.
+
+7. O bloco "catch" não está associado a um bloco "try". O código que pode gerar a exceção (o laço "for") deveria estar dentro de um bloco "try".
+
+8.
+public class Exercicio1 {
+    public static void main(String[] args) {
+        try {
+            int[] vetor = new int[] { 2, 4, 6, 8, 10, 12 };
+            for (int i = 0; i < 12; i++) {
+                System.out.println(vetor[i]);
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Fim do vetor!");
+        }
+    }
+}
