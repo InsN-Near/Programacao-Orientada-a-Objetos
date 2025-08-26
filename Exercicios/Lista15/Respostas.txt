@@ -1,0 +1,84 @@
+LISTA 2 DE EXERCÍCIOS – TRATAMENTO DE EXCEÇÕES  SOLUÇÃO
+
+
+1. Um bloco try/catch pode ser usado para tratar dois ou mais tipos de exceções diferentes?
+
+Sim. Podese usar múltiplos blocos "catch" para um único bloco "try", cada um tratando um tipo diferente de exceção, ou usar a sintaxe de multicatch (ex: "catch (IOException | SQLException e)").
+
+
+2. A cláusula catch de uma exceção da superclasse também captura subclasses dessa superclasse?
+
+Sim. Devido ao polimorfismo, um "catch" que captura uma superclasse também capturará qualquer uma de suas subclasses.
+
+
+3. Em blocos try aninhados, o que acontece a uma exceção que não é capturada pelo bloco interno?
+
+A exceção é propagada para o bloco "try" externo para ser tratada pelo "catch" correspondente, se houver.
+
+
+4. Um catch interno pode relançar uma exceção para um catch externo?
+
+Sim, usando a palavra-chave "throw" dentro do bloco "catch" interno.
+
+
+5. O que o throw faz?
+
+A palavra-chave "throw" é usada para lançar explicitamente (manualmente) uma exceção.
+
+
+6. Throw lança objetos? Quais objetos?
+
+Sim. Lança objetos que são instâncias da classe "Throwable" ou de uma de suas subclasses (como "Exception" ou "Error").
+
+
+7. Uma exceção pode ser lançada após ser capturada?
+
+Sim, um bloco "catch" pode usar a instrução "throw" para relançar a mesma exceção ou uma nova.
+
+
+8. De acordo com o código descrito a seguir, quais linhas serão executadas se ocorrer uma exceção no método a() e no método b()? Por que isso ocorre?
+
+Linhas executadas: 1, 2, 4, 5, 7, 8, 10, 11.
+Por que: São dois blocos "try/catch" independentes. O primeiro captura a exceção de "a()", a trata e a execução continua. Em seguida, o segundo bloco "try/catch" executa e captura a exceção de "b()".
+
+
+9. De acordo com o código descrito a seguir, se ocorrer uma exceção na execução do método a() quais linhas serão executadas:
+
+Linhas executadas: 1, 2, 5, 6.
+A linha 3 ("b();") não será executada, pois a exceção em "a()" desvia o fluxo de controle diretamente para o bloco "catch".
+
+
+10. O bloco finally é a última parte do código executada antes de o programa terminar. Isso é verdadeiro ou falso? Explique sua resposta.
+
+Falso. O bloco "finally" é executado após o bloco "try" (ou "catch"), mas o programa continua sua execução normal após a estrutura "trycatchfinally". Ele não é necessariamente a última coisa a ser executada no programa.
+
+
+11. Quais são as duas subclasses diretas de Throwable?
+
+"Error" e "Exception".
+
+
+12. Um código deve normalmente lançar exceções de tipo Error? Por que?
+
+Não. Erros ("Error") indicam problemas graves e irrecuperáveis na JVM (como falta de memória), sobre os quais a aplicação geralmente não tem como se recuperar.
+
+
+13. Finalize o código descrito a seguir:
+
+public class ParImpar {
+    public static void main (String args[]) {
+        int num;
+        try {
+            num = Integer.parseInt(args[0]);
+            if ((num % 2) == 0) {
+                System.out.println("Número par");
+            } else {
+                System.out.println("Número ímpar");
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Erro: Forneça um número como argumento na linha de comando.");
+        } catch (NumberFormatException e) {
+            System.out.println("Erro: O argumento fornecido não é um número inteiro válido.");
+        }
+    }
+}
